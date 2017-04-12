@@ -116,7 +116,34 @@ $(function() {
 		}
 
 	});
+	
+	$('.add-oil-input').on('click',function (e) {
 
+		e.preventDefault();
+
+		var bottomOil = $('.bottom-oil-product');
+
+        bottomOil.clone().addClass('newElem-oil').removeClass('bottom-oil-product').appendTo('.add-container');
+    });
+
+	$('.add-input').on('click',function (e) {
+
+        e.preventDefault();
+
+        var removeInput = $('.remove-input');
+
+        var addNafta = $('.add-nafta');
+
+        addNafta.clone(true).addClass('newElem-nafta').removeClass('add-nafta').appendTo('.nafta-container');
+
+    });
+	$('.remove-input').on('click',function (e) {
+
+        e.preventDefault();
+
+        $(this).closest('.newElem-nafta').remove()
+
+	});
 
 
 
