@@ -136,15 +136,14 @@ $(function() {
 
         addNafta.clone(true).addClass('newElem-nafta').removeClass('add-nafta').appendTo('.nafta-container');
 
+        removeInput.on('click',function (e) {
+
+        	e.preventDefault();
+
+            $(this).closest('.newElem-nafta').remove()
+
+        });
+
     });
-	$('.remove-input').on('click',function (e) {
-
-        e.preventDefault();
-
-        $(this).closest('.newElem-nafta').remove()
-
-	});
-
-
-
+	
 });

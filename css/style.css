@@ -608,6 +608,10 @@ header {
 .header-top .message {
   padding: 0;
   width: 4%;
+  line-height: 45px;
+}
+.header-top .message a {
+  width: 100%;
 }
 .header-top .message .img-message {
   display: inline-block;
@@ -621,7 +625,7 @@ header {
   background-color: #0079c1;
 }
 .header-top .message.active .img-message {
-  background-position: 0px -14px;
+  background-position: 0 -14px;
 }
 .header-top .admin {
   padding: 0;
@@ -639,7 +643,7 @@ header {
   background-color: #0079c1;
 }
 .header-top .admin.active .img-key {
-  background-position: 0px -17px;
+  background-position: 0 -17px;
 }
 .header-top .border-dashed {
   position: relative;
@@ -875,7 +879,7 @@ header {
 }
 .header-bottom form button {
   position: absolute;
-  right: 0;
+  right: -2px;
   top: 0;
   border: transparent;
   background: transparent;
@@ -886,15 +890,15 @@ header {
   max-width: 980px;
   margin: auto;
 }
-.header-bottom nav ul:before,
-.header-bottom nav ul:after {
+.header-bottom ul:before,
+.header-bottom ul:after {
   content: " ";
   display: table;
 }
-.header-bottom nav ul:after {
+.header-bottom ul:after {
   clear: both;
 }
-.header-bottom nav a {
+.header-bottom  a {
   text-decoration: none;
   padding: 8px 10px;
   font-family: 'DinProMedium', sans-serif;
@@ -902,7 +906,7 @@ header {
   color: #808080;
   text-transform: uppercase;
 }
-.header-bottom nav li {
+.header-bottom  li {
   margin-right: 40px;
   float: left;
   height: 32px;
@@ -911,12 +915,12 @@ header {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-.header-bottom nav li:last-child {
+.header-bottom .menu-top li:last-child {
   margin-right: 0;
 }
-.header-bottom nav .menu-top li:hover .sub-menu {
-  display: block;
-  z-index: 20;
+.header-bottom .menu-top li:hover .sub-menu {
+  /*display: block;*/
+  /*z-index: 20;*/
 }
 .header-bottom .mobile-menu {
   display: none;
@@ -1378,20 +1382,21 @@ main img {
   position: absolute;
   width: 285px;
   background-color: #f2efeb;
-  -webkit-transform: translateX(-285px) translateZ(0);
-          transform: translateX(-285px) translateZ(0);
+  -webkit-transform: translateX(-285px);
+          transform: translateX(-285px);
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 2px 3px 10px 1px;
           box-shadow: rgba(0, 0, 0, 0.1) 2px 3px 10px 1px;
   z-index: 149;
   -webkit-transition: -webkit-transform 0.3s ease, top 0.3s ease;
   -webkit-transition: top 0.3s ease, -webkit-transform 0.3s ease;
+
   transition: top 0.3s ease, -webkit-transform 0.3s ease;
   transition: transform 0.3s ease, top 0.3s ease;
   transition: transform 0.3s ease, top 0.3s ease, -webkit-transform 0.3s ease;
 }
 .fixed-menu.active {
-  -webkit-transform: translateX(0) translateZ(0);
-          transform: translateX(0) translateZ(0);
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 .fixed-menu a {
   color: #444444;
@@ -1411,8 +1416,9 @@ main img {
 .hide-fixed-menu {
   position: fixed;
   top: 197px;
-  height: auto;
   z-index: 149;
+  height: 48px;
+  width: 48px;
 }
 .show-fixed-menu {
   z-index: 150;
@@ -1432,12 +1438,13 @@ main img {
   transition: top 0.3s ease, -webkit-transform 0.3s ease;
   transition: transform 0.3s ease, top 0.3s ease;
   transition: transform 0.3s ease, top 0.3s ease, -webkit-transform 0.3s ease;
-  -webkit-transform: translateX(0) translateZ(0);
-          transform: translateX(0) translateZ(0);
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 .show-fixed-menu.active {
-  -webkit-transform: translateX(285px) translateZ(0);
-          transform: translateX(285px) translateZ(0);
+  -webkit-transform: translateX(285px);
+          transform: translateX(285px);
+  /*left: 285px;*/
 }
 .show-fixed-menu:hover {
   background-color: #6a6a6a;
@@ -1480,12 +1487,12 @@ main img {
   transition: top 0.3s ease, -webkit-transform 0.3s ease;
   transition: transform 0.3s ease, top 0.3s ease;
   transition: transform 0.3s ease, top 0.3s ease, -webkit-transform 0.3s ease;
-  -webkit-transform: translateX(0) translateZ(0);
-          transform: translateX(0) translateZ(0);
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 .show-Que.active {
-  -webkit-transform: translateX(-17px) translateZ(0);
-          transform: translateX(-17px) translateZ(0);
+  -webkit-transform: translateX(-17px);
+          transform: translateX(-17px);
 }
 .show-Que a {
   font-family: 'DinProMedium', sans-serif;
@@ -1700,11 +1707,14 @@ main img {
   font-family: 'DinProRegular', sans-serif;
 }
 .link-container:before {
-  content: '';
-  display: inline-block;
-  width: 15px;
-  height: 14px;
-  background: url("../img/contact/home-img.png") no-repeat;
+  /*content: '';*/
+  /*display: inline-block;*/
+  /*width: 15px;*/
+  /*height: 14px;*/
+  /*background: url("../img/contact/home-img.png") no-repeat;*/
+}
+.link-container img {
+  vertical-align: middle;
 }
 .link-container:after {
   content: '';
@@ -2457,8 +2467,8 @@ main img {
   margin: 10px 0;
   /*line-height: 20px;*/
 }
-.cars-container .credit-list span {
-  font-size: 9px;
+.data-relevant .credit-list span {
+  font-size: 8px;
 }
 .cars-table {
   padding: 25px;
