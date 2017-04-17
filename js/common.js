@@ -55,9 +55,9 @@ $(function() {
 		$('.message').removeClass('active');
 	});
 
-	$('.show-Que').click(function (e) {
-		e.preventDefault();
-		$(this).addClass('active');
+	$('.show-Que a:first-child').click(function () {
+
+		$('.show-Que').addClass('active');
 	});
 
 	$('#que').on('hidden.bs.modal', function() {
@@ -121,10 +121,16 @@ $(function() {
 
 		e.preventDefault();
 
+        var removeInput = $('.remove-input');
+
 		var bottomOil = $('.bottom-oil-product');
 
-        bottomOil.clone().addClass('newElem-oil').removeClass('bottom-oil-product').appendTo('.add-container');
+        bottomOil.clone(true).addClass('newElem-oil').removeClass('bottom-oil-product').appendTo('.add-container');
+
+        $('.newElem-oil input').val('');
+
     });
+
 
 	$('.add-input').on('click',function (e) {
 
@@ -136,14 +142,26 @@ $(function() {
 
         addNafta.clone(true).addClass('newElem-nafta').removeClass('add-nafta').appendTo('.nafta-container');
 
-        removeInput.on('click',function (e) {
-
-        	e.preventDefault();
-
-            $(this).closest('.newElem-nafta').remove()
-
-        });
+        $('.newElem-nafta input').val('');
 
     });
-	
+
+    $('.remove-input').on('click',function (e) {
+
+        e.preventDefault();
+
+        $(this).closest('.newElem-oil').remove();
+
+        $(this).closest('.newElem-nafta').remove()
+
+    });
+
+    //
+    // $('.show-popup-debt').on('click',function (e) {
+		//
+		// var list = $('.sites__item');
+		// $(this)
+		//
+    // })
+
 });
