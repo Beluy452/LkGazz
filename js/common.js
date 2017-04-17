@@ -127,7 +127,7 @@ $(function() {
 
         bottomOil.clone(true).addClass('newElem-oil').removeClass('bottom-oil-product').appendTo('.add-container');
 
-        $('.newElem-oil input').val('');
+        // $('.newElem-oil input').val('');
 
     });
 
@@ -142,7 +142,7 @@ $(function() {
 
         addNafta.clone(true).addClass('newElem-nafta').removeClass('add-nafta').appendTo('.nafta-container');
 
-        $('.newElem-nafta input').val('');
+        // $('.newElem-nafta input').last().val('');
 
     });
 
