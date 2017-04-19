@@ -27,15 +27,15 @@ $(function() {
 		var mobileMenu = 	$('.mobile-menu').toggleClass('active');
 		var toggleMenu = $(this).toggleClass('active');
 
-		if($(mobileMenu).hasClass('active')) {
-			$(document).mouseup(function (e){
-				var div = $(".mobile-menu");
-				if (!div.is(e.target) && div.has(e.target).length === 0) {
-					div.removeClass('active');
-					toggleMenu.removeClass('active');
-				}
-			});
-		}
+		// if($(mobileMenu).hasClass('active')) {
+		// 	$(document).mouseup(function (e){
+		// 		var div = $(".mobile-menu");
+		// 		if (!div.is(e.target) && div.has(e.target).length === 0) {
+		// 			div.removeClass('active');
+		// 			toggleMenu.removeClass('active');
+		// 		}
+		// 	});
+		// }
 	});
 
 	$('.mobile-menu a').click(function (e) {
