@@ -3927,11 +3927,18 @@ footer .search-footer button {
     display: table-footer-group;
   }
   .history-container .float-container {
-    display: table;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
   }
   .history-container .left-block {
     margin-right: 0;
-    display: table-header-group;
   }
   .float-container .right {
     margin-left: 0;
