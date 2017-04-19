@@ -2055,6 +2055,7 @@ main img {
 }
 .showing-notifications {
   color: #808080;
+  position: relative;
 }
 .showing-notifications.clear-style .learn-more {
   position: static;
